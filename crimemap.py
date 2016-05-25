@@ -18,7 +18,7 @@ def home():
         crimes = DB.get_all_crimes()
         crimes = json.dumps(crimes)
     except Exception as e:
-        print(e)
+        print e
         crimes = None
     return render_template("home.html", crimes=crimes)
 
